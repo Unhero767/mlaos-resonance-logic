@@ -13,6 +13,10 @@ class MagisterialEncoder:
     def detect_singularity(self, number):
         return "UNDECIDABLE" if number % 2 == 0 else "STABLE_ASH"
 
+def arithmetize_formula(expression):
+    encoder = MagisterialEncoder()
+    return encoder.encode_syntax(expression)
+
 if __name__ == "__main__":
     encoder = MagisterialEncoder()
     print(f"Coordinate: {encoder.encode_syntax('phi → ◦A')}")
